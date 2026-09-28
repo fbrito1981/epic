@@ -16,7 +16,7 @@
   <link rel="icon" href="img/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Orbitron:wght@500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script type="application/ld+json">
   {
@@ -35,7 +35,7 @@
   <a class="skip" href="#contenido">Saltar al contenido</a>
   <header class="site-header">
     <a class="brand" href="#contenido">
-      <img src="img/logo.svg" width="36" height="36" alt="">
+      <img src="img/logo.svg" width="54" height="54" alt="">
       <span>EPIC</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
@@ -58,8 +58,8 @@
         <p class="lede">Tres cuerpos de MDF enchapado en paraíso. Un módulo de graves y dos satélites, apilados en una torre de 90 centímetros.</p>
         <ul class="facts">
           <li>300 × 300 × 900 mm</li>
-          <li>8″ · 5″ · domo de seda</li>
-          <li>24 V · 4 A</li>
+          <li>30 W cada satélite</li>
+          <li>30 W en graves</li>
         </ul>
         <p class="hero-links">
           <a class="text-link" href="#sistema">Ver el sistema</a>
@@ -72,7 +72,7 @@
       <div class="section-head">
         <p class="kicker">Ambientes</p>
         <h2>La misma torre, en la casa.</h2>
-        <p>Living, dormitorio y comedor. Madera clara, luz de día y poco más. Las imágenes son ambientaciones del diseño.</p>
+        <p>La torre en el dormitorio y en el comedor, y los tres cubos repartidos en el living. Madera clara y luz de día. Son ambientaciones del diseño.</p>
       </div>
       <div class="gallery">
         <figure>
@@ -82,10 +82,10 @@
           <figcaption><span>01</span> Dormitorio</figcaption>
         </figure>
         <figure>
-          <button type="button" data-full="img/comedor.jpg" data-alt="Torre EPIC junto a una mesa redonda de madera y una jarra de barro, en un comedor blanco." data-caption="Comedor">
-            <img src="img/comedor.jpg" width="720" height="1424" alt="Torre EPIC junto a una mesa redonda de madera y una jarra de barro, en un comedor blanco.">
+          <button type="button" data-full="img/repartidos.jpg" data-alt="Los tres cubos de EPIC separados en un living: el grave en el piso y cada satélite en otro lugar de la habitación." data-caption="Repartidos">
+            <img src="img/repartidos.jpg" width="720" height="1424" alt="Los tres cubos de EPIC separados en un living: el grave en el piso y cada satélite en otro lugar de la habitación.">
           </button>
-          <figcaption><span>02</span> Comedor</figcaption>
+          <figcaption><span>02</span> Repartidos</figcaption>
         </figure>
         <figure>
           <button type="button" data-full="img/diseno.jpg" data-alt="Diseño de la torre EPIC: módulo de graves abajo y dos satélites enmarcados arriba." data-caption="El diseño">
@@ -100,7 +100,7 @@
       <div class="section-head">
         <p class="kicker">Sistema</p>
         <h2>Dos satélites y un grave.</h2>
-        <p>EPIC es un 2.1. Cada satélite lleva un medio y un domo. El cubo de abajo se ocupa de los graves. Enchufado, la placa suma volumen, graves y agudos sobre una entrada de línea.</p>
+        <p>EPIC es un 2.1. Cada satélite lleva un medio y un domo. El cubo de abajo se ocupa de los graves. La señal entra por un miniplug de 3,5 mm o por Bluetooth, y de ahí salen volumen, graves y agudos.</p>
       </div>
       <ol class="modules">
         <li>
@@ -116,7 +116,7 @@
         <li>
           <p class="index">03</p>
           <h3>Electrónica</h3>
-          <p>Entrada de línea y salidas Sat 1, Sat 2 y Sub. Controles de agudos, graves y volumen. La red entra en 100–240 V y una fuente interna entrega 24 V a 4 A a una etapa clase D.</p>
+          <p>Entrada de línea en miniplug de 3,5 mm y Bluetooth. Salidas Sat 1, Sat 2 y Sub, con agudos, graves y volumen. La fuente es conmutada, de 24 V y 4 A. Cada canal del TPA3116D2 entrega 30 W al parlante que alimenta.</p>
         </li>
       </ol>
     </section>
@@ -193,12 +193,6 @@
               <td>6 Ω ±10%</td>
             </tr>
             <tr>
-              <th scope="row">Potencia</th>
-              <td>150 W RMS<br>300 W programa</td>
-              <td>100 W RMS<br>200 W programa</td>
-              <td>120 W máxima</td>
-            </tr>
-            <tr>
               <th scope="row">Sensibilidad</th>
               <td>90 dB, 1 W / 1 m</td>
               <td>90 dB, 1 W / 1 m</td>
@@ -225,9 +219,7 @@
           </tbody>
         </table>
       </div>
-      <p class="note">El fabricante del medio recomienda cruzarlo desde 500 Hz. El del domo, desde 2,9 kHz a 18 dB/octava, o desde 5 kHz a 12 dB/octava. La ficha del domo anota la bobina como 26 mm y, más abajo, como 32 mm. Esas cifras son de la hoja del transductor, no un filtro publicado de EPIC.</p>
-
-      <h3 class="table-title">Alimentación y placa</h3>
+      <h3 class="table-title">Alimentación y amplificación</h3>
       <div class="table-wrap">
         <table>
           <tbody>
@@ -237,15 +229,15 @@
             </tr>
             <tr>
               <th scope="row">Fuente interna</th>
-              <td>24 V DC, 4 A. Módulo WX-DC2412, rótulo DC24V-4</td>
+              <td>Conmutada, 24 V DC, 4 A</td>
             </tr>
             <tr>
-              <th scope="row">Etapa de potencia</th>
-              <td>Clase D, placa KRC-86B V4.0, con filtro LC de salida</td>
+              <th scope="row">Amplificadores</th>
+              <td>TPA3116D2, marcados TDA3116. 30 W por canal a 24 V sobre 8 Ω: cada satélite y el grave</td>
             </tr>
             <tr>
               <th scope="row">Audio</th>
-              <td>Entrada de línea. Salidas Sat 1, Sat 2 y Sub</td>
+              <td>Línea en miniplug de 3,5 mm y Bluetooth. Salidas Sat 1, Sat 2 y Sub</td>
             </tr>
             <tr>
               <th scope="row">Controles</th>
@@ -264,10 +256,6 @@
         <p>Para conocer el sistema o encargar una unidad.</p>
         <a class="mail" href="mailto:info@fuerz4.com">info@fuerz4.com</a>
       </div>
-      <figure class="qr">
-        <img src="img/qr.svg" width="148" height="148" alt="Código QR que abre epic.fuerz4.com">
-        <figcaption>epic.fuerz4.com</figcaption>
-      </figure>
     </section>
   </main>
 
