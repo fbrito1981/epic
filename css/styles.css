@@ -57,14 +57,22 @@ a { color: inherit; }
   border-bottom: 1px solid transparent;
 }
 
+.wordmark {
+  font-family: "Orbitron", var(--sans);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
 .brand {
   display: flex;
   align-items: center;
   gap: 0.7rem;
   text-decoration: none;
-  font-family: var(--serif);
-  letter-spacing: 0.18em;
-  font-size: 1.425rem;
+  font-family: "Orbitron", var(--sans);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-size: clamp(0.68rem, 2.1vw, 0.95rem);
 }
 
 .brand img { display: block; width: 54px; height: 54px; }
@@ -145,9 +153,10 @@ h1 {
   margin: 0;
   font-family: "Orbitron", var(--sans);
   font-weight: 500;
-  font-size: clamp(3.4rem, 8vw, 6.4rem);
-  line-height: 0.95;
-  letter-spacing: 0.04em;
+  font-size: clamp(1.7rem, 4.2vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: 0.03em;
+  max-width: 12em;
 }
 
 h2 {
@@ -204,20 +213,24 @@ h3 {
 .section-head p:last-child { margin: 0; color: var(--ink-soft); }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.75rem 1.5rem;
+  align-items: flex-start;
 }
 
-.gallery figure { margin: 0; }
+.gallery figure {
+  margin: 0;
+  width: min(100%, 17rem);
+}
 
 .gallery button {
   display: block;
   width: 100%;
   padding: 0;
   border: 0;
-  background: var(--paper-deep);
+  background: transparent;
   cursor: zoom-in;
 }
 
@@ -225,10 +238,8 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center 62%;
-  background: var(--paper-deep);
+  object-fit: contain;
+  object-position: center;
 }
 
 .hero-media img { vertical-align: middle; }
@@ -321,7 +332,11 @@ tbody th { width: 22%; font-weight: 400; }
   border-top: 1px solid var(--line);
 }
 
-.contact p { margin: 0; color: var(--ink-soft); }
+.contact p {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--ink-soft);
+}
 
 .mail {
   display: inline-block;
@@ -370,6 +385,11 @@ tbody th { width: 22%; font-weight: 400; }
 
 .site-footer p { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; }
 
+.site-footer .wordmark {
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+}
+
 .site-footer a { color: #f2e2da; margin-left: auto; }
 
 .lightbox {
@@ -382,9 +402,20 @@ tbody th { width: 22%; font-weight: 400; }
 
 .lightbox::backdrop { background: rgba(26, 31, 37, 0.72); }
 
-.lightbox figure { margin: 0; }
+.lightbox figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.lightbox img { width: 100%; height: auto; }
+.lightbox img {
+  width: auto;
+  max-width: 100%;
+  max-height: 80vh;
+  height: auto;
+  object-fit: contain;
+}
 
 .lightbox figcaption {
   margin-top: 0.4rem;
@@ -430,9 +461,13 @@ tbody th { width: 22%; font-weight: 400; }
   .nav a { padding: 0.7rem 0; border-top: 1px solid var(--line); }
 
   .hero,
-  .gallery,
   .modules,
   .contact { grid-template-columns: 1fr; display: grid; }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .hero { min-height: 0; }
 

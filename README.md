@@ -1,8 +1,8 @@
-# EPIC
+# EPIC Sound System
 
 Sitio de [epic.fuerz4.com](https://epic.fuerz4.com), el sistema de sonido 2.1 de Fuerz4.
 
-Página estática. Tipografía, color `#1A1F25` / `#BA4C1B` y el isotipo salen de NanoServer. Las medidas del gabinete y la placa salen de los planos de EPIC. Los transductores son Tonhalle W8150, RM5 y T13DR, con los datos publicados por Audifan.
+Página estática. Tipografía, color `#1A1F25` / `#BA4C1B` y el isotipo salen de NanoServer. Las medidas del gabinete y la placa salen de los planos de EPIC Sound System. Los transductores son Tonhalle W8150, RM5 y T13DR, con los datos publicados por Audifan.
 
 ## Vista local
 
