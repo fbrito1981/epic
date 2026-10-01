@@ -1,2 +1,5 @@
 .DS_Store
 *.log
+__pycache__/
+mail.env
+deploy/mail.env

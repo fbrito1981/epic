@@ -24,3 +24,5 @@ Abrir `http://127.0.0.1:8766`.
 El nombre público no resuelve hasta dar de alta el hostname en el túnel. Los pasos están en [docs/cloudflare.md](docs/cloudflare.md).
 
 El alta del buzón `info@fuerz4.com` y el reenvío están en [docs/correo.md](docs/correo.md).
+
+El formulario de `/garantia.html` hace `POST /api/garantia`. El primer envío manda un código de 8 dígitos al email del cliente; la solicitud llega a info@fuerz4.com recién cuando ese código se confirma. En el servidor, `epic-form` manda esos correos por SMTP. La clave va en `/etc/apps/conf/epic/mail.env` (plantilla en `deploy/mail.env.example`); el deploy no la pisa si ya existe.

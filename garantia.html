@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Garantía — EPIC Sound System</title>
+  <meta name="description" content="Solicitá la garantía de EPIC Sound System. Dejanos tus datos y a la brevedad nos comunicamos.">
+  <link rel="canonical" href="https://epic.fuerz4.com/garantia.html">
+  <meta name="theme-color" content="#f3eee7">
+  <meta name="referrer" content="origin">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Orbitron:wght@500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=20261001a">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="img/logo.svg" width="54" height="54" alt="">
+      <span class="wordmark">EPIC Sound System</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" class="nav" aria-label="Secciones">
+      <a href="index.html#ambientes">Ambientes</a>
+      <a href="index.html#sistema">Sistema</a>
+      <a href="index.html#especificaciones">Especificaciones</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="section claim">
+      <p class="kicker">Garantía</p>
+      <h1>Contanos qué pasó.</h1>
+      <p class="lede">Dejanos tus datos y el problema del equipo. La solicitud llega a info@fuerz4.com.</p>
+      <p class="coverage">La garantía es de 6 meses desde la entrega y cubre defectos de construcción y fallas de funcionamiento, en las piezas de madera y en los componentes electrónicos. No cubre roturas por golpes, caídas o transporte una vez entregado el equipo, ni fallas por un uso inapropiado.</p>
+      <form class="claim-form" action="/api/garantia" method="post" novalidate>
+        <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>
+          Nombre completo
+          <input id="nombre" name="Nombre completo" type="text" autocomplete="name" inputmode="text" autocapitalize="words" enterkeyhint="next" spellcheck="false" required maxlength="120">
+        </label>
+        <label>
+          Dirección y localidad
+          <input id="direccion" name="Dirección y localidad" type="text" autocomplete="street-address" inputmode="text" autocapitalize="words" enterkeyhint="next" required maxlength="200">
+        </label>
+        <label>
+          Teléfono de contacto
+          <input id="telefono" name="Teléfono" type="tel" autocomplete="tel" inputmode="numeric" autocapitalize="off" spellcheck="false" enterkeyhint="next" pattern="[0-9]{8,15}" minlength="8" maxlength="15" aria-describedby="telefono-ayuda" required>
+          <span class="field-hint" id="telefono-ayuda">Solo números, con código de área. Ejemplo: 3434123456.</span>
+        </label>
+        <label>
+          Email
+          <input id="email" name="Email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="next" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" aria-describedby="email-ayuda" required maxlength="120">
+          <span class="field-hint" id="email-ayuda">Es necesario contar con una dirección válida. Se enviará un código de seguridad al email indicado.</span>
+        </label>
+        <label>
+          Comentarios
+          <textarea id="comentarios" name="Comentarios" inputmode="text" autocapitalize="sentences" spellcheck="true" enterkeyhint="send" required maxlength="2000"></textarea>
+        </label>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <div class="form-actions">
+          <button class="send" type="submit">Enviar</button>
+          <button class="back" type="button">Volver</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <dialog class="verify" aria-labelledby="verify-title">
+    <button type="button" class="close verify-close">Cerrar</button>
+    <p class="kicker">Verificación</p>
+    <h2 id="verify-title">Ingresá el código.</h2>
+    <p class="verify-copy">Te enviamos un código de 8 dígitos a <span class="verify-mail"></span>.</p>
+    <form class="verify-form">
+      <label>
+        Código
+        <input id="codigo" name="codigo" type="text" inputmode="numeric" autocomplete="one-time-code" autocapitalize="off" spellcheck="false" enterkeyhint="done" maxlength="8" required>
+      </label>
+      <p class="form-status verify-status" role="status" aria-live="polite"></p>
+      <button class="send" type="submit">Confirmar</button>
+    </form>
+  </dialog>
+
+  <dialog class="verify done" aria-labelledby="done-title">
+    <button type="button" class="close done-close">Cerrar</button>
+    <p class="kicker">Garantía</p>
+    <h2 id="done-title">Recibimos correctamente tu solicitud. A la brevedad nos pondremos en contacto.</h2>
+  </dialog>
+
+  <footer class="site-footer">
+    <img src="img/logo-white.svg" width="42" height="42" alt="">
+    <p>Fuerz4 · <span class="wordmark">EPIC Sound System</span></p>
+    <nav class="footer-links" aria-label="Pie">
+      <a href="garantia.html" aria-current="page">Garantía</a>
+      <a href="mailto:info@fuerz4.com">info@fuerz4.com</a>
+    </nav>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/garantia.js?v=20260929h"></script>
+</body>
+</html>

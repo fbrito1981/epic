@@ -14,18 +14,21 @@ nav.querySelectorAll("a").forEach((link) => {
 });
 
 const dialog = document.querySelector(".lightbox");
-const shot = dialog.querySelector("img");
-const caption = dialog.querySelector("figcaption");
 
-document.querySelectorAll("[data-full]").forEach((button) => {
-  button.addEventListener("click", () => {
-    shot.src = button.dataset.full;
-    shot.alt = button.dataset.alt;
-    caption.textContent = button.dataset.caption;
-    dialog.showModal();
+if (dialog) {
+  const shot = dialog.querySelector("img");
+  const caption = dialog.querySelector("figcaption");
+
+  document.querySelectorAll("[data-full]").forEach((button) => {
+    button.addEventListener("click", () => {
+      shot.src = button.dataset.full;
+      shot.alt = button.dataset.alt;
+      caption.textContent = button.dataset.caption;
+      dialog.showModal();
+    });
   });
-});
 
-dialog.addEventListener("click", (event) => {
-  if (event.target === dialog) dialog.close();
-});
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+}

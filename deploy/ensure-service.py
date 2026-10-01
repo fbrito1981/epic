@@ -19,6 +19,26 @@ if "container_name: epic" not in text:
     if not text.endswith("\n"):
         text += "\n"
     path.write_text(text + block)
+    text = path.read_text()
     print("compose: servicio epic agregado")
 else:
     print("compose: servicio epic ya estaba")
+
+form = """
+  epic-form:
+    image: python:3.12-alpine
+    container_name: epic-form
+    restart: unless-stopped
+    env_file:
+      - /etc/apps/conf/epic/mail.env
+    command: ["python", "-u", "/app/form-server.py"]
+    volumes:
+      - /etc/apps/conf/epic/form-server.py:/app/form-server.py:ro
+"""
+if "container_name: epic-form" not in text:
+    if not text.endswith("\n"):
+        text += "\n"
+    path.write_text(text + form)
+    print("compose: servicio epic-form agregado")
+else:
+    print("compose: servicio epic-form ya estaba")
