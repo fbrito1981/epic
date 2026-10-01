@@ -334,22 +334,14 @@ tbody th { width: 22%; font-weight: 400; }
   font-size: 0.92rem;
 }
 
-.shot-note {
-  margin-top: 1.5rem;
-  font-size: 0.82rem;
-}
-
-.section-head p.price {
-  margin: 1.6rem 0 0;
+.section-head p.fine {
+  margin: 0.85rem 0 0;
   color: var(--ink-soft);
   font-size: 1.15rem;
 }
 
-.price .kicker { display: block; margin-bottom: 0.4rem; }
-
 .price-amount {
-  display: block;
-  margin-bottom: 0.2rem;
+  margin: 0;
   font-family: var(--serif);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   line-height: 1.1;
@@ -361,19 +353,15 @@ tbody th { width: 22%; font-weight: 400; }
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  gap: 1.2rem 2.5rem;
+  gap: 1.5rem 2.75rem;
 }
 
 .contact-links .mail { margin-top: 0; }
 
-.mail-label {
+.contact-icon {
   display: block;
-  margin-bottom: 0.35rem;
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  width: 1.7rem;
+  height: 1.7rem;
   color: var(--orange-dark);
 }
 
@@ -385,7 +373,10 @@ tbody th { width: 22%; font-weight: 400; }
 }
 
 .mail {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
   margin-top: 1rem;
   font-family: var(--serif);
   font-size: clamp(1.8rem, 4vw, 3rem);
@@ -578,14 +569,31 @@ tbody th { width: 22%; font-weight: 400; }
 
 .site-footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  padding: 1.4rem var(--pad);
+  gap: 0.9rem;
+  padding: 1.35rem var(--pad) 1.15rem;
   background: var(--ink);
   color: var(--white);
 }
 
+.footer-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
 .site-footer p { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; }
+
+.site-footer .footer-note {
+  letter-spacing: 0.01em;
+  text-transform: none;
+  text-align: center;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: #f2e2da;
+}
 
 .site-footer .wordmark {
   letter-spacing: 0.04em;
@@ -684,7 +692,7 @@ tbody th { width: 22%; font-weight: 400; }
 
   .hero-media img { max-height: 68vh; }
 
-  .site-footer { flex-wrap: wrap; }
+  .footer-bar { flex-wrap: wrap; }
 
   .footer-links { margin-left: 0; }
 
