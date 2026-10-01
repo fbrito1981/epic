@@ -340,15 +340,6 @@ tbody th { width: 22%; font-weight: 400; }
   font-size: 1.15rem;
 }
 
-.price-amount {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  line-height: 1.1;
-  color: var(--ink);
-  white-space: nowrap;
-}
-
 .contact-links {
   display: flex;
   flex-wrap: wrap;
