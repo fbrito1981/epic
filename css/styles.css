@@ -340,6 +340,44 @@ tbody th { width: 22%; font-weight: 400; }
   font-size: 1.15rem;
 }
 
+.price-was {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.85rem;
+  margin: 0 0 0.4rem;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 3vw, 2.05rem);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.price-was s {
+  text-decoration-thickness: 0.06em;
+  text-decoration-color: var(--orange);
+}
+
+.price-off {
+  color: var(--orange-dark);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+}
+
+#precio h2 { margin-bottom: 0; }
+
+.price-offer {
+  margin: 0.95rem 0 0;
+  max-width: 34rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
 .contact-links {
   display: flex;
   flex-wrap: wrap;
