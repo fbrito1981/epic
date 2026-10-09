@@ -360,10 +360,6 @@ tbody th { width: 22%; font-weight: 400; }
 
 .price-off {
   color: var(--orange-dark);
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.16em;
 }
 
 #precio h2 { margin-bottom: 0; }
